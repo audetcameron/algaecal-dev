@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>AlgaeCal | Natural Calcium Supplements</title>
+  <meta name="description" content="Introducing the ONLY Calcium Supplement that Increases Bone Density* ... or Your Money Back! Learn More" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>  
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo_wrapper">
+             <img src="img/logo.png" alt="AlgaeCal Logo" class="logo">
+           </div>
+         </div>
+         <div class="col-md-8">
+          <div class="talk__wrapper">
+            <p class="tap-to-talk noMarginBottom">           
+              <strong>
+                <a href="tel:18008200184" class="tap_to_talk-a">Tap to Talk 
+                  <span class="tap_to_talk_span--font">1-800-820-0184</span>
+                </a>
+              </strong>
+            </p>
+            <p class=" speak__with--font">
+             <svg width="21" height="21" class="visible-xs-inline speak__with--svg">
+              <image xlink:href="img/phone-icon.svg" src="img/phone-icon.png" width="21" height="21" />
+            </svg>
+            Speak to our Bone Health Specialists!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero__wrapper hero--bg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero__title">
+          <p class="hero__title--text hero__title--strikethrough "><span>INTRODUCING</span></p>
+          <h2 class="hero__tagline">
+            The ONLY Calcium Supplement that 
+            <span class="hero__tagline__span--font redline--position hero__tagline--redline-1">Increases Bone</span> 
+            <span class="hero__tagline__span--font redline--position hero__tagline--redline-2">Density*</span>
+            <br class="visible-xs visible-sm">
+             ... or Your Money Back
+          </h2>           
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<h1>Hello, world!</h1>
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+    <div class="wistia_embed wistia_async_cecdwaq3dz videoFoam=true " style="height:100%;width:100%">&nbsp;
+    </div>
+  </div>
+</div>
+<a href="#" id="getTime">watch time</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+<script>
+  window._wq = window._wq || [];
+  _wq.push({ id: "cecdwaq3dz", onReady: function(video) {
+
+  // at 2:13 seconds
+  video.bind('secondchange', function(s) {
+    if (s === 133) {
+    //if bundle !hasclass addclass block - else do nothign
+    console.log("We just reached " + s + " seconds!");
+  }
+});
+
+  // at 2:13 seconds skipping
+  video.bind("timechange", function(t) {
+    if (t > 133) {
+    //if bundle !hasclass block display block - else do nothign
+    console.log("Passed 2:13 | Display Pricing Bundle");
+    return video.unbind;
+  }
+});
+
+//debugging purpose time stamp
+$("#getTime").click(function() {
+  console.log(video.time());
+});
+
+
+
+
+
+}});
+
+
+
+</script>
+
+
+</body>
+</html>

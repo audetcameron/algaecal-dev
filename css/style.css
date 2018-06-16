@@ -1,0 +1,120 @@
+/*style*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Glober, Roboto, sans-serif;
+  background-color: #fff; }
+
+/*helpers*/
+.noMargin {
+  margin: 0; }
+
+.noMarginBottom {
+  margin-bottom: 0px; }
+
+/*header*/
+.logo_wrapper {
+  margin-top: 25px;
+  margin-top: 2.5rem; }
+  .logo_wrapper .logo {
+    margin-left: 15px;
+    max-width: 100%; }
+
+.talk__wrapper {
+  margin-left: 15px;
+  margin-left: 1.5rem;
+  margin-bottom: 0; }
+
+.tap-to-talk .tap_to_talk-a {
+  color: #000;
+  font-size: 19.73px;
+  font-size: 1.973rem;
+  text-decoration: none; }
+  .tap-to-talk .tap_to_talk-a .tap_to_talk_span--font {
+    color: #54b8cd; }
+
+.speak__with--font {
+  font-size: 14.18px;
+  font-size: 1.418rem;
+  margin-top: 5px;
+  margin-top: .5rem; }
+  .speak__with--font .speak__with--svg {
+    vertical-align: middle; }
+
+/*Hero -- Introducing Block*/
+.hero__wrapper {
+  padding: 30px 0 20px 15px;
+  color: #ffffff; }
+
+.hero--bg {
+  background: #4c813d url(../img/green-bg.jpg) 100%/cover;
+  background: #4c813d url(../img/green-bg.svg) 100%/cover; }
+
+.hero__title--text {
+  font-size: 29.4px;
+  font-size: 2.94rem;
+  letter-spacing: .5px; }
+
+.hero__title--strikethrough {
+  line-height: 0.5;
+  text-align: center; }
+
+.hero__title--strikethrough span {
+  display: inline-block;
+  position: relative; }
+
+.hero__title--strikethrough span:before, .hero__title--strikethrough span:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  border-top: 3px solid white;
+  top: 5px;
+  width: 600px; }
+
+.hero__title--strikethrough span:before {
+  right: 100%;
+  margin-right: 15px; }
+
+.hero__title--strikethrough span:after {
+  left: 100%;
+  margin-left: 15px; }
+
+.hero__tagline {
+  font-size: 28.61px;
+  font-size: 2.861rem;
+  line-height: 43.59px;
+  line-height: 4.359rem;
+  letter-spacing: -.3px; }
+  .hero__tagline .hero__tagline__span--font {
+    font-size: 34.05px;
+    font-size: 3.405rem;
+    line-height: 44.95px;
+    line-height: 4.495rem;
+    letter-spacing: .2rem; }
+  .hero__tagline .redline--position {
+    position: relative; }
+  .hero__tagline .hero__tagline--redline-1:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: red; }
+  .hero__tagline .hero__tagline--redline-2:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: red; }
+
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

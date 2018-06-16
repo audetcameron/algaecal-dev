@@ -1,0 +1,166 @@
+/*style*/
+$bg-color: #fff ;
+$black: #000;
+$light-blue:#54b8cd;
+$link-blue: #008ba4;
+$white: #ffffff;
+
+$font-stack: Glober,Roboto,sans-serif ;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $bg-color;
+}
+/*helpers*/
+.noMargin{
+    margin:0;
+}
+.noMarginBottom{
+    margin-bottom:0px;
+}
+
+
+
+/*header*/
+.logo_wrapper{
+    margin-top:25px;
+    margin-top:2.5rem;
+    .logo {
+        margin-left:15px;
+        max-width: 100%;
+    }
+}
+.talk__wrapper{
+    margin-left:15px;
+    margin-left:1.5rem;
+    margin-bottom:0;
+}
+.tap-to-talk {
+    .tap_to_talk-a{
+        color:$black;
+        font-size:19.73px;
+        font-size: 1.973rem;
+        text-decoration:none;
+        .tap_to_talk_span--font{
+            color:$light-blue;
+        }
+    }
+}
+.speak__with--font{
+    font-size: 14.18px;
+    font-size: 1.418rem;
+    margin-top:5px;
+    margin-top:.5rem;
+    .speak__with--svg{
+        vertical-align: middle;
+    }
+}
+
+/*Hero -- Introducing Block*/
+.hero__wrapper{
+    padding:30px 0 20px 15px;
+    color:$white;
+}
+.hero--bg{
+    background: rgba(76, 129, 61, 1) url(../img/green-bg.jpg) 100%/cover;
+    background: rgba(76, 129, 61, 1) url(../img/green-bg.svg) 100%/cover;
+}
+.hero__title--text{
+ font-size:29.4px;
+ font-size:2.94rem;
+ letter-spacing:.5px;
+}
+.hero__title--strikethrough {
+  line-height: 0.5;
+  text-align: center;
+}
+.hero__title--strikethrough span {
+  display: inline-block;
+  position: relative;  
+}
+.hero__title--strikethrough span:before, .hero__title--strikethrough span:after {
+  content: "";
+      position: absolute;
+      height: 3px;
+      border-top: 3px solid white;
+      top: 5px;
+      width: 600px;
+  }
+  .hero__title--strikethrough span:before {
+      right: 100%;
+      margin-right: 15px;
+  }
+  .hero__title--strikethrough span:after {
+      left: 100%;
+      margin-left: 15px;
+  }
+  .hero__tagline{
+    font-size:28.61px;
+    font-size:2.861rem;
+    line-height:43.59px;
+    line-height:4.359rem;
+    letter-spacing:-.3px;
+    .hero__tagline__span--font{
+        font-size:34.05px;
+        font-size:3.405rem;
+        line-height:44.95px;
+        line-height:4.495rem;
+        letter-spacing:.2rem;
+
+    }
+    .redline--position{
+        position:relative;
+    }
+    .hero__tagline--redline-1:before{
+        content:"";
+          position: absolute;
+          top:20px;
+          left:0;
+          display:block;
+          width:100%;
+          height:2px;
+          background:red;
+      }
+
+      .hero__tagline--redline-2:before{
+       content:"";
+          position: absolute;
+          top:20px;
+          left:0;
+          display:block;
+          width:100%;
+          height:2px;
+          background:red;
+      }
+  }
+
+
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

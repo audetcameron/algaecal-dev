@@ -76,7 +76,10 @@ $(overlay).click(function() {
 
 //Show Speak to our bone specialist during work hours
 var cards = $("#cards");
-			cards.hide();
+
+$(function() {
+    cards.hide();
+});			
 
 window._wq = window._wq || [];
 _wq.push({ id: "cecdwaq3dz", onReady: function(video) {

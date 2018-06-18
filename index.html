@@ -37,7 +37,7 @@
 								</strong>
 							</p>
 							<!-- if hours open -->
-							<p class=" speak__with--font">
+							<p class="speak__with--font">
 								<svg width="21" height="21" class="visible-xs-inline speak__with--svg">
 									<image xlink:href="img/phone-icon.svg" src="img/phone-icon.png" width="21" height="21" />
 								</svg>
@@ -75,7 +75,7 @@
 					<h1 class="heading">Build <strong>brand new bone</strong> WITHIN 6 MONTHS with this <strong>rare algae</strong> calcium ...even if you're 85!</h1>
 				</div>
 
-				<div class="col-sm-5 col-md-5">
+				<div class="col-sm-5 col-md-4 col-md-push-1">
 					<div class="videoWrapper">
 						<div class="imageOverlay"></div>
 						<div class="videoEmbed videoHidden">
@@ -365,163 +365,180 @@
 			</div><!--./row-->
 		</div><!--./container -->
 
+		<div class="seven-year-guarantee container guarantee--bg">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="guarantee__inside">
+						<img class="guarantee__image img-responsive" src="img/7-year-badge-lg.png" alt="7-year-badge-lg">
+						<h3 class="guarantee__title">Stronger Bones For<br>7 Years Guarantee</h3>
+						<p class="guarantee__short--txt">
+							When you follow directions for use of AlgaeCal Plus and Strontium Boost – we guarantee you will see increased bone density in EVERY follow-up bone scan you have while using these 2 products - or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years. Also, if you are unsatisfied at any time you can return my product for a full refund, no questions asked! <br>
+							<a href="" data-toggle="modal" data-target="#myModal">Click Here for Details</a></p>
+							<img src="img/dean-neuls.jpg" class="guarantee__image img-responsive" alt="Dean Neuls">
+							<div class="guarantee__details">
+								<p><strong>Dean Neuls,</strong><br>
+									CEO and CO-Founder,<br>
+									AlgaeCal Inc.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-5 col-md-push-1  col-lg-push-2 hidden-xs hidden-sm helloFromCam">
+						<p>Thank you for the opportunity to apply <br>
+							<a href="http://cameronaudet.com">-Cameron</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="as-seen-on">
+								<h3 class="as-seen-on--title">
+									As Seen On
+								</h3>
+								<div class="as-seen-on--img-map">
+									<img src="img/as-seen-on-logos.jpg" alt="As Seen On" class="img-responsive as-seen-on__img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-9 col-xs-push-1 col-md-4 col-md-push-4">
+							<div class="references">
+								<h3 class="references--title">
+									Scientific References
+								</h3>
+								<ol class="references__list">
+									<li>Marques A, Ferreira RJ,
+										Santos E, et al. The
+										accuracy of osteoporotic
+										fracture risk prediction
+										tools: a systematic
+										review and meta-analysis. Ann Rheum Dis.
+										2015 Nob;74(11):1958-67.
+										doi:<br>
+										10.1136/annrheumdis-
+										2015-207907. Epub 2015
+										Aug 6. PMID: 26248637,
+									</li>
+									<li>
+										Riggs BL, Melton LJ 3rd.
+										The worldwide problem
+										of osteoporosis: insights
+										afforded by
+										epidemilogy. Bone. 1995
+										Nov;17(5 Suppl):505S-
+										511S. PMID: 8573428
+									</li>
+									<li>
+										https://www.algaecal.com/expoert-
+										insights/prescription-
+										drugs-that-cause-osteoporosis/
+									</li>
+								</ol>
+
+								<a href="#" class="references__link">View Full References List...</a>
 
 
 
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-		<script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
-		<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-
-		<script>
-
-//json settings
-var jsonFetch = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://www.algaecal.com/wp-json/acf/v3/options/options",
-	"method": "GET"
-}
-function getJson(){
-	return $.ajax(jsonFetch);
-}
-getJson().done(function(response){
-    //console.log(response);
-    var phoneNumber = response.acf.default_phone_number;
-    var tapToTalk = $('.tap_to_talk_span--font');
-    tapToTalk.html(phoneNumber);
-  });
-
-//create Date 
-var d = new Date();
-var dayOfweek = d.getDay();
-//convert to int
-var dayInt = parseInt(dayOfweek) || 0;
-//get UTC time + subtract difference to PST
-var utcHours = d.getUTCHours() -8;
-var utcMinutes = d.getUTCMinutes();
-var utcDay = d.getUTCDay();
-//set default
-var isOpen = false;
-
-//check day
-if (dayOfweek >= 1 && dayOfweek <=5) {
-	//is Monday - Friday
-	console.log("its the middle of the week");
-
-	if(utcHours >=7 && utcHours <= 16){
-		//console.log("it's between 7am and 4pm PST")
-		isOpen = true;
-	}else {
-		console.log("closed");
-	}
-}
-
-if (dayOfweek === 6 ) { 
-//it's Saturday
-console.log("it's saturday");
-if(utcHours >=8 && utcHours <= 16){
-		//console.log("it's between 8am and 4pm PST")
-		isOpen = true;
-	}else {
-		console.log("closed");
-	}
-}
-
-if (dayOfweek === 0 ) {
-//its Sunday!
-if(utcHours >=8 && utcHours <= 14){
-		//isOpen = true;
-	}else {
-		console.log("closed");
-	}
-	console.log("its sunday");
-}
+								<div class="card-1__add-to-cart text-center">
+									<a class="add-btn-bottom" href="https://www.algaecal.com/product/bone-builder-packs">
+										Buy Now 
+										<span class="glyphicon glyphicon glyphicon-triangle-right add-btn__icon" aria-hidden="true"></span>
+									</a>
+								</div>
 
 
-
-//create image thumbnail overlay for video
-var overlay = $('.imageOverlay');
-$(overlay).click(function() {
-	//remove overlay on click
-	overlay.css( "display", "none" );
-	$('.videoEmbed').removeClass('videoHidden');
-	//showvideo
-	$('.videoEmbed').addClass('showVideo');
-});
-
-//Show Speak to our bone specialist during work hours
-
-window._wq = window._wq || [];
-_wq.push({ id: "cecdwaq3dz", onReady: function(video) {
-
-	//to display package pricing bundle boxes at 2:13
-	// at 2:13 seconds
-	video.bind('secondchange', function(s) {
-		if (s === 133) {
-			console.log("We just reached " + s + " seconds!"); //if bundle !hasclass addclass block - else do nothing
-		}
-	});
-
-	// at 2:13 seconds skipping
-	video.bind("timechange", function(t) {
-		if (t > 133) {
-			console.log("Passed 2:13 | Display Pricing Bundle");//if bundle !hasclass block display block - else do nothing
-			return video.unbind;
-		}
-	});
-
-}});
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 
 
 
-//dev only - remove for prod
-//Bootstrap3 mobile first screen size debugger
-function showViewPortSize(display) {
-	if(display) {
-		var height = jQuery(window).height();
-		var width = jQuery(window).width();
-		var mediaQ =null;
-		if ($(window).width() > 320 && $(window).width() <= 767) {
-			var mediaQ ='xs';
-		}else if ($(window).width() > 767 && $(window).width() <=991)  {
-			var mediaQ ='sm';
-		}else if ($(window).width() > 991 && $(window).width() <=1199) {
-			var mediaQ = 'md';
-		}else if ($(window).width() > 1199) {
-			var mediaQ = 'lg';
-		};
-		jQuery('body').prepend('<div id="viewportsize" style="font-size:11px;z-index:9999;position:fixed;top:1px;left:5px;color:#fff;background:#000;padding:10px">Height: '+height+'<br>Width: '+width+' <br> Media:  '+mediaQ+'</div>');
 
-		jQuery(window).resize(function() {
-			height = jQuery(window).height();
-			width = jQuery(window).width();
-			if ($(window).width() > 320 && $(window).width() <= 767) {
-				var mediaQ ='xs';
-			}else if ($(window).width() > 767 && $(window).width() <=991)  {
-				var mediaQ ='sm';
-			}else if ($(window).width() > 991 && $(window).width() <=1199) {
-				var mediaQ = 'md';
-			}else if ($(window).width() > 1199) {
-				var mediaQ = 'lg';
-			};
+				<footer>
+					<div class=" text-center">
+						<a href="https://www.algaecal.com"><img src="img/logo.png" alt="AlgaeCal Logo" class="logo"></a>
+					</div>
 
-			jQuery('#viewportsize').html('Height: '+height+'<br>Width: '+width+' <br> Media: '+mediaQ);
-		});
-
-	}
-}
-
-showViewPortSize(true);
+					<div class="footer__links">
+						<ul class="footer__ul">
+							<li class="footer__li"><a href="#" class="footer__li-a">Shipping & Returns</a></li>
+							<li class="footer__li"><a href="#" class="footer__li-a">Health Disclaimer</a></li>
+							<li class="footer__li"><a href="#" class="footer__li-a">Legal and Privacy Policy</a></li>
+							<li class="footer__li"><a href="#" class="footer__li-a">Contact</a></li>
+							<li class="footer__li"><a href="#" class="footer__li-a">Order Now</a></li>
+						</ul>
+					</div>
+					<p class="copyright text-center">Copyright &copy; 2017 AlgaeCal</p>
+				</footer>
 
 
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content seven-year-guarantee ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
 
-</script>
+							<div class="guarantee__inside">
+
+								<h3 class="guarantee__title">Too Good to Be True?</h3>
+
+								<p class="guarantee__short--txt">Since no other calcium company, no drug, and no doctor guarantees you will increase bone density even for one year, why should you believe our 7 year guarantee?</p> <p>Because we have been offering this guarantee since 2006. Because 37,169 customers like you have ALREADY built stronger bones&#8230;and only one person didn’t see the results we guarantee!  And because our products are clinically supported to increase bone density over a 7 year period &#8211; they just work.</p>
+								<p class="guarantee__short--txt">Measurable improvements always appear at 6 months from when you start your AlgaeCal Plus and Strontium Boost program.  So if your next DXA (or DEXA)  scan is scheduled half a year or more from now we guarantee your bone density increase.  You may choose to wait for your next scheduled scan so that it is paid for by your insurance, or you may choose to pay out of pocket to check your results earlier.  Either way is fine for us.  Just allow at least 6 months of taking the products as directed before your follow up scan.</p> 
+								<p class="guarantee__short--txt">In other words, “scan to scan to scan” improvements MUST be yours for the next 7 years!</p> 
+								<p class="guarantee__short--txt"><img class="aligncenter size-large wp-image-62567 img-responsive" src="https://www.algaecal.com/wp-content/uploads/osteo-DXA-scan-1024x260.jpg" alt="Osteo DXA Scan" /></p> 
+								<h3 class="guarantee__title">How It Works</h3> 
+								<p class="guarantee__short--txt">You need two DXA scans to make this guarantee work.  The first scan needs to be within 30 days of your purchase of AlgaeCal Plus + Strontium Boost. The second scan can be whenever you want, as long as it’s at least 6 months after you start taking the products (and not more than 30 days after you stop).</p> 
+								<p class="guarantee__short--txt">This allows you to measure how well these products increase your bone density when you get your second scan.</p> 
+								<h3 class="guarantee__title">What You Need To Do</h3> 
+								<ol>
+									<li>Have a DXA scan that is not more than 30 days old to establish a baseline measurement. (If you had a DXA scan more than 30 days ago, your guaranteed period will launch from your next scan onward. So don&#8217;t wait! Get started building healthy new bone right now before your guarantee begins.)</li>
+									<li>Take these two products at full dose as directed for at least six months.</li>
+									<li>Get your follow up DXA scan from the same clinic as your first scan. It doesn&#8217;t matter when… six, twelve, even 24 months after you start – as long as you have continued to use your products between scans.</li>
+								</ol> 
+								<p class="guarantee__short--txt">If your follow up scan does not show an increase in your hip and/or spinal bone density, we refund every penny you paid us between those two scans.</p> 
+								<h3 class="guarantee__title">What Happens After 7 Years?</h3>
+								<p class="guarantee__short--txt">You can repeat this process of increasing bone, guaranteed, from scan to scan, for the next 7 years! (Because our products are clinically supported to increase bone density over a 7 year period.) <strong>At that point, we’ll be happy to repeat the guarantee.</strong> That’s how confident we are that you will see a bone density increase with every subsequent scan!  You are automatically extended!</p>
+								<p class="guarantee__short--txt">Your satisfaction is also guaranteed for as long as you take our products. Even when you see bone density increases- let us know and we&#8217;ll refund you.</p>
+								<h3 class="guarantee__title">Exceptions</h3>
+								<ol>
+									<li><strong>Current Prescription Drug Use.</strong>  Studies show that a wide range of prescription drugs, including bone drugs, interfere with natural bone density increases.  You may take drugs now that impede AlgaeCal Plus and Strontium Boost from increasing your bone density. To learn if your prescription is excluding you from this guarantee, please call toll free <a class="phone-number js-trackable-phone-number" href="tel:+18008200184">1-800-820-0184</a>.</li> 
+									<li><strong>Early Stage Menopause.</strong> If you are in the first five years of menopause, your hormone balance may cause a dramatic drop in bone density.  So even the great nutrients in AlgaeCal Plus and Strontium Boost may not be able to offset the loss. So women in this phase of life are excepted from the Guarantee.<strong>IMPORTANT NOTE:</strong> Even if you fall into one of the guarantee exceptions, AlgaeCal Plus and Strontium Boost is still your smartest choice because it is the ONLY nutrient combination that is clinically supported to increase bone density in adults.  If you are taking medications or are in early menopause, you need every nutritional advantage you can get.  Often, exempted customers STILL increase their bone density!</li>
+								</ol>
+								<div style="text-align: center;" class="bone-7yr-guarantee-video-proof"> 
+									<h4 class="video-title">Here&#8217;s video proof</h4> 
+									<div class='ac-embed'>
+										<div class='embed-responsive embed-responsive-16by9'>
+											<iframe src="https://fast.wistia.net/embed/iframe/oxo4ak3z2d?dnt=1&#038;playButton=false&#038;playerColor=676767&#038;videoFoam=1" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="500" height="281"></iframe>
+
+										</div>
+									</div> 
+								</div> 
+								<p class="guarantee__short--txt"><strong>Disclaimer:</strong> <em>Guarantee matches 3 clinical studies results.</em> <a href="/research/" target="_blank" rel="noopener noreferrer">View studies.</a></p> 
+							</div>
+						</div>
+					</div>
+				</div>
 
 
-</body>
-</html>
+
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+				<script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
+				<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+				<script src="js/main.js"></script>
+
+			</body>
+			</html>

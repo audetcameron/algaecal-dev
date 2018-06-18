@@ -62,7 +62,8 @@ body {
 
 .hero__title--strikethrough span {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  padding: 0px 10px; }
 
 .hero__title--strikethrough span:before, .hero__title--strikethrough span:after {
   content: "";
@@ -70,15 +71,13 @@ body {
   height: 3px;
   border-top: 3px solid white;
   top: 5px;
-  width: 600px; }
+  width: 5rem; }
 
 .hero__title--strikethrough span:before {
-  right: 100%;
-  margin-right: 15px; }
+  right: 100%; }
 
 .hero__title--strikethrough span:after {
-  left: 100%;
-  margin-left: 15px; }
+  left: 100%; }
 
 .hero__tagline {
   font-size: 28.61px;
@@ -97,24 +96,247 @@ body {
   .hero__tagline .hero__tagline--redline-1:before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 35px;
     left: 0;
     display: block;
-    width: 100%;
-    height: 2px;
-    background: red; }
+    width: 274px;
+    height: 10px;
+    background-image: url(../img/redline-1.png); }
+  .hero__tagline .hero__tagline--redline-2 {
+    z-index: 9999; }
   .hero__tagline .hero__tagline--redline-2:before {
     content: "";
     position: absolute;
-    top: 20px;
+    z-index: -1;
+    top: 35px;
     left: 0;
     display: block;
-    width: 100%;
-    height: 2px;
-    background: red; }
+    width: 156px;
+    height: 14px;
+    background-image: url(../img/redline-2.png); }
+
+.heading {
+  font-weight: 300;
+  font-size: 17.5px;
+  font-size: 1.75rem;
+  letter-spacing: .2rem;
+  line-height: 25.35px;
+  line-height: 2.535rem; }
+
+/*video*/
+#videoContainer {
+  margin-top: 10px;
+  margin-top: 1rem; }
+
+.videoWrapper {
+  position: relative; }
+  .videoWrapper .imageOverlay {
+    background-image: url(../img/playCta.jpg);
+    background-size: cover;
+    width: 342px;
+    height: 192px; }
+  .videoWrapper .videoHidden {
+    display: none; }
+  .videoWrapper .showVideo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 342px;
+    height: 192px; }
+
+/*cards*/
+.card-1 {
+  position: relative;
+  padding: 15px; }
+  .card-1.card-1--margin {
+    margin: 50px 40px 35px 20px; }
+  .card-1.card-1--last-margin {
+    margin: 50px 40px 20px 20px; }
+  .card-1.card-1--shadow {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66);
+    box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66); }
+  .card-1 .card-1__title {
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-top: 1rem; }
+  .card-1 .card-1__sub-heading {
+    color: #008ba4;
+    font-size: 18px;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    font-weight: normal;
+    margin-bottom: 20px; }
+  .card-1 .coupon__circle {
+    text-align: center;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+    background: #e87b15;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66);
+    box-shadow: 0px 0px 10px 2px rgba(143, 143, 143, 0.66); }
+  .card-1 .coupon__circle--text {
+    color: #ffffff;
+    font-size: 23.09px;
+    font-size: 2.309rem;
+    line-height: 1.5rem;
+    margin: 20px auto; }
+  .card-1 .coupon__circle--span {
+    font-size: 16.25px;
+    font-size: 1.625rem;
+    line-height: 1.5rem; }
+  .card-1 .card-1__img {
+    margin: 0 auto; }
+  .card-1 .card-1__price__wrapper {
+    text-align: center; }
+  .card-1 .card-1__price {
+    font-size: 34px;
+    position: relative; }
+    .card-1 .card-1__price:before {
+      content: "$";
+      display: block;
+      position: absolute;
+      top: -2px;
+      left: -11px;
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .card-1 .card-1__price:after {
+      font-size: 10px;
+      font-size: 1rem;
+      content: "USD";
+      display: block;
+      position: absolute;
+      right: -23px;
+      top: 13px;
+      text-decoration: underline; }
+  .card-1 .card-1__daily-price {
+    font-size: 20px;
+    font-size: 2rem;
+    background: center no-repeat url(../img/daily-price-highlight.png);
+    min-width: 173px;
+    min-height: 21px;
+    vertical-align: middle; }
+  .card-1 .daily__price--strong {
+    position: relative; }
+  .card-1 .card-1__add-to-cart {
+    margin-top: 12px;
+    margin-bottom: 30px;
+    padding-left: 20px; }
+  .card-1 .add-btn {
+    position: relative;
+    font-size: 18.29px;
+    font-size: 1.829rem;
+    color: #fff;
+    vertical-align: middle;
+    padding: .8rem 3rem;
+    margin: 0 0 0 20px;
+    border-radius: .5rem;
+    background-color: #40ad4a;
+    border-color: #358f3d;
+    -webkit-box-shadow: 0 5px 0 #358f3d, 0 8px 6px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 5px 0 #358f3d, 0 8px 6px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 -1px 1px rgba(41, 41, 44, 0.35); }
+    .card-1 .add-btn:before {
+      content: "";
+      background: url(../img/7-year-badge.png);
+      height: 76px;
+      width: 76px;
+      position: absolute;
+      left: -62px;
+      top: -20px; }
+    .card-1 .add-btn .add-btn__icon {
+      top: 3px; }
+
+.card__custom--border {
+  border-left: 15px solid #008ba4;
+  border-bottom: 15px solid #008ba4;
+  border-right: 15px solid #008ba4; }
+  .card__custom--border .card--custom--header {
+    padding: 5px;
+    background: #008ba4; }
+  .card__custom--border .card--custom-tagline {
+    color: #ffffff;
+    letter-spacing: .2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 0;
+    text-transform: uppercase; }
+
+/*Tables*/
+.table--section--title {
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+.algeCal-facts {
+  max-width: 346px;
+  border: 3px solid black;
+  padding: 0.5rem; }
+  .algeCal-facts .noBorder {
+    border-top: none; }
+  .algeCal-facts .thick--border--bottom {
+    border-bottom: 15px solid black; }
+  .algeCal-facts .customLeft {
+    text-align: left !important; }
+  .algeCal-facts .algeCal-facts__header {
+    padding: .5rem;
+    margin: 0; }
+    .algeCal-facts .algeCal-facts__header.thick--border--bottom {
+      border-bottom: 15px solid black; }
+    .algeCal-facts .algeCal-facts__header p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0; }
+  .algeCal-facts .algeCal-facts__title {
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 1.5rem 0; }
+  .algeCal-facts .amount-per-serving {
+    font-size: 1.5rem;
+    border-bottom: 5px #000 solid; }
+
+.algeCal-facts__table thead tr th, .algeCal-facts__table thead tr td {
+  border: 0; }
+
+.algeCal-facts__table th, .algeCal-facts__table td {
+  font-weight: bold;
+  padding: 0.25rem 0;
+  border-top: 1px solid black;
+  white-space: nowrap; }
+
+.algeCal-facts__table td:last-child {
+  text-align: right; }
+
+.algeCal-facts__table .blank-cell {
+  width: 1rem;
+  border-top: 0; }
+
+.algeCal-facts__table .thick-row th, .algeCal-facts__table .thick-row td {
+  border-top-width: 5px; }
 
 /* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .hero--bg {
+    margin-bottom: 0; } }
+
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .hero--bg {
+    margin-bottom: 20px;
+    margin-bottom: 2rem; }
+  .heading {
+    margin-top: 6rem; }
+  #cards {
+    margin-top: 30px; }
+    #cards .card__custom--border {
+      margin: 30px 0px 50px 0px; } }
+
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */

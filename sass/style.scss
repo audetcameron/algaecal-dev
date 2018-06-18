@@ -8,71 +8,71 @@ $white: #ffffff;
 $font-stack: Glober,Roboto,sans-serif ;
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: $font-stack;
-    background-color: $bg-color;
+  font-family: $font-stack;
+  background-color: $bg-color;
 }
 /*helpers*/
 .noMargin{
-    margin:0;
+  margin:0;
 }
 .noMarginBottom{
-    margin-bottom:0px;
+  margin-bottom:0px;
 }
 
 
 
 /*header*/
 .logo_wrapper{
-    margin-top:25px;
-    margin-top:2.5rem;
-    .logo {
-        margin-left:15px;
-        max-width: 100%;
-    }
+  margin-top:25px;
+  margin-top:2.5rem;
+  .logo {
+    margin-left:15px;
+    max-width: 100%;
+  }
 }
 .talk__wrapper{
-    margin-left:15px;
-    margin-left:1.5rem;
-    margin-bottom:0;
+  margin-left:15px;
+  margin-left:1.5rem;
+  margin-bottom:0;
 }
 .tap-to-talk {
-    .tap_to_talk-a{
-        color:$black;
-        font-size:19.73px;
-        font-size: 1.973rem;
-        text-decoration:none;
-        .tap_to_talk_span--font{
-            color:$light-blue;
-        }
+  .tap_to_talk-a{
+    color:$black;
+    font-size:19.73px;
+    font-size: 1.973rem;
+    text-decoration:none;
+    .tap_to_talk_span--font{
+      color:$light-blue;
     }
+  }
 }
 .speak__with--font{
-    font-size: 14.18px;
-    font-size: 1.418rem;
-    margin-top:5px;
-    margin-top:.5rem;
-    .speak__with--svg{
-        vertical-align: middle;
-    }
+  font-size: 14.18px;
+  font-size: 1.418rem;
+  margin-top:5px;
+  margin-top:.5rem;
+  .speak__with--svg{
+    vertical-align: middle;
+  }
 }
 
 /*Hero -- Introducing Block*/
 .hero__wrapper{
-    padding:30px 0 20px 15px;
-    color:$white;
+  padding:30px 0 20px 15px;
+  color:$white;
 }
 .hero--bg{
-    background: rgba(76, 129, 61, 1) url(../img/green-bg.jpg) 100%/cover;
-    background: rgba(76, 129, 61, 1) url(../img/green-bg.svg) 100%/cover;
+  background: rgba(76, 129, 61, 1) url(../img/green-bg.jpg) 100%/cover;
+  background: rgba(76, 129, 61, 1) url(../img/green-bg.svg) 100%/cover;
 }
 .hero__title--text{
- font-size:29.4px;
- font-size:2.94rem;
- letter-spacing:.5px;
+  font-size:29.4px;
+  font-size:2.94rem;
+  letter-spacing:.5px;
 }
 .hero__title--strikethrough {
   line-height: 0.5;
@@ -81,22 +81,25 @@ body {
 .hero__title--strikethrough span {
   display: inline-block;
   position: relative;  
+  padding:0px 10px;
 }
-.hero__title--strikethrough span:before, .hero__title--strikethrough span:after {
-  content: "";
+.hero__title--strikethrough span {
+  &:before, &:after{
+    content: "";
       position: absolute;
       height: 3px;
       border-top: 3px solid white;
       top: 5px;
-      width: 600px;
+      width: 5rem;    
+    }
   }
   .hero__title--strikethrough span:before {
-      right: 100%;
-      margin-right: 15px;
+    right: 100%;
+    // margin-right: 15px;
   }
   .hero__title--strikethrough span:after {
-      left: 100%;
-      margin-left: 15px;
+    left: 100%;
+    // margin-left: 15px;
   }
   .hero__tagline{
     font-size:28.61px;
@@ -105,58 +108,335 @@ body {
     line-height:4.359rem;
     letter-spacing:-.3px;
     .hero__tagline__span--font{
-        font-size:34.05px;
-        font-size:3.405rem;
-        line-height:44.95px;
-        line-height:4.495rem;
-        letter-spacing:.2rem;
-
+      font-size:34.05px;
+      font-size:3.405rem;
+      line-height:44.95px;
+      line-height:4.495rem;
+      letter-spacing:.2rem;
     }
     .redline--position{
-        position:relative;
+      position:relative;
     }
-    .hero__tagline--redline-1:before{
-        content:"";
-          position: absolute;
-          top:20px;
-          left:0;
-          display:block;
-          width:100%;
-          height:2px;
-          background:red;
-      }
-
-      .hero__tagline--redline-2:before{
+    .hero__tagline--redline-1{
+      &:before{
        content:"";
-          position: absolute;
-          top:20px;
-          left:0;
-          display:block;
-          width:100%;
-          height:2px;
-          background:red;
+        position: absolute;
+        top:35px;
+        left:0;
+        display:block;
+        width:274px;
+        height:10px;
+        background-image:url(../img/redline-1.png);       
       }
+    }
+    .hero__tagline--redline-2{
+      z-index:9999;
+    }
+    .hero__tagline--redline-2{
+      &:before{
+       content:"";
+        position: absolute;
+        z-index:-1;
+        top:35px;
+        left:0;
+        display:block;
+        width:156px;
+        height:14px;
+        background-image:url(../img/redline-2.png);     
+      }
+    }
+  }
+  .heading{
+    font-weight:300;
+    font-size:17.5px;
+    font-size:1.75rem;
+    letter-spacing:.2rem;
+    line-height:25.35px;
+    line-height:2.535rem;
+  }
+  /*video*/
+  #videoContainer{
+    margin-top:10px;
+    margin-top:1rem;
+  }
+  .videoWrapper{
+    position: relative;
+    .imageOverlay{
+      background-image:url(../img/playCta.jpg);
+      background-size: cover;
+      width:342px;
+      height:192px;
+    }    
+    .videoHidden{
+      display: none;
+    }        
+    .showVideo{
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 342px;
+      height: 192px;
+    }
   }
 
+  /*cards*/
+  .card-1{
+    position:relative;
+    padding:15px;
+    &.card-1--margin{
+      margin:50px 40px 35px 20px;
+    }
+    &.card-1--last-margin{
+      margin:50px 40px 20px 20px;
+    }
+    &.card-1--shadow{
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+      box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+    }
+    .card-1__title{
+      font-size:25px;
+      font-size:2.5rem;
+      margin-top:10px;
+      margin-top:1rem;
+    }
+    .card-1__sub-heading {
+      color:#008ba4;
+      font-size:18px;
+      font-size:1.8rem;
+      letter-spacing:.1rem;
+      font-weight:normal;
+      margin-bottom:20px;
+    }
+    .coupon__circle{
+      text-align:center;
+      position:absolute;
+      right:-30px;
+      top:-30px;
+      border-radius:40px;
+      width:70px;
+      height:70px;
+      background:#e87b15;
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+      box-shadow: 0px 0px 10px 2px rgba(143,143,143,0.66);
+    }
+    .coupon__circle--text{
+      color:#ffffff;
+      font-size:23.09px;
+      font-size:2.309rem;
+      line-height:1.5rem;
+      margin:20px auto;
+    }
+    .coupon__circle--span{
+      font-size:16.25px;
+      font-size:1.625rem;
+      line-height:1.5rem;
+    }
+    .card-1__img{
+      margin:0 auto;
+    }
+    .card-1__price__wrapper{
+      text-align:center;
+    }
+    .card-1__price{
+      font-size:34px;
+      position:relative;
+      &:before{
+        content:"$";
+          display:block;
+          position:absolute;
+          top:-2px;
+          left:-11px;
+          font-size:18px;
+          font-size:1.8rem;
+        }
+        &:after{
+          font-size:10px;
+          font-size:1rem;
+          content:"USD";
+            display:block;
+            position:absolute;
+            right:-23px;
+            top:13px;
+            text-decoration:underline;
+          }
+        }
+        .card-1__daily-price{
+          font-size:20px;
+          font-size:2rem;
+          background: center no-repeat url(../img/daily-price-highlight.png);
+          min-width:173px;
+          min-height:21px;
+          vertical-align:middle;
+        }
+        .daily__price--strong{
+          position:relative;
+        }
+        .card-1__add-to-cart{
+          margin-top:12px;
+          margin-bottom:30px;
+          padding-left:20px;
+        }
+        .add-btn{
+          position:relative;
+          &:before{
+            content:"";
+              background:url(../img/7-year-badge.png);
+              height:76px;
+              width:76px;
+              position:absolute;
+              left:-62px;
+              top:-20px;
+            }
+            font-size:18.29px;
+            font-size: 1.829rem;
+            color: #fff;  
+            vertical-align:middle;
+            padding: .8rem 3rem;
+            margin: 0 0 0 20px;
+            border-radius: .5rem; 
+            background-color: #40ad4a;
+            border-color: #358f3d;
+            -webkit-box-shadow: 0 5px 0 #358f3d, 0 8px 6px rgba(0,0,0,.35);
+            box-shadow: 0 5px 0 #358f3d, 0 8px 6px rgba(0,0,0,.35);
+            text-shadow: 0 -1px 1px rgba(41,41,44,.35);
+            .add-btn__icon{
+              top:3px;
+            }
+          }
+        } 
+
+        .card__custom--border{
+          border-left:15px solid #008ba4;
+          border-bottom:15px solid #008ba4;
+          border-right:15px solid #008ba4;
+          .card--custom--header{
+            padding:5px;
+            background:#008ba4;
+          }
+          .card--custom-tagline{
+            color:#ffffff;
+            letter-spacing:.2rem;
+            font-size:14px;
+            font-size:1.4rem;
+            margin:0;
+            text-transform:uppercase;
+          }
+        }
 
 
-  /* Custom, iPhone Retina */ 
-  @media only screen and (min-width : 320px) {
+        /*Tables*/
+        .table--section--title{
+          font-size:24px;
+          font-size:2.4rem;
+        }
+        .algeCal-facts {
+          max-width:346px;
+          border: 3px solid black;
+          padding: 0.5rem;
+          .noBorder{
+            border-top:none;
+          }
+          .thick--border--bottom{
+            border-bottom: 15px solid black;
+          }
+          .customLeft{
+            text-align:left !important;
+          }
+          .algeCal-facts__header {
+            &.thick--border--bottom{
+              border-bottom: 15px solid black;
+            }
+            padding: .5rem;
+            margin: 0;
+            p {
+              font-size:1.5rem;
+              font-weight:bold;
+              margin:0;
+            }
+          }
+          .algeCal-facts__title {
+            font-weight: bold;
+            font-size: 3.5rem;
+            text-align:center;
+            margin: 1.5rem 0;
+          }
+          .amount-per-serving{
+            font-size:1.5rem;
+            border-bottom:5px #000 solid;
+          }
+        }
 
-}
+        .algeCal-facts__table {
+          thead tr {
+            th, td {
+              border: 0;
+            }
+          }
+          th, td {
+            font-weight: bold;
+            padding: 0.25rem 0;
+            border-top: 1px solid black; 
+            white-space: nowrap;
+          }
+          td {
+            &:last-child {
+              text-align: right;
+            }
+          }
+          .blank-cell {
+            width: 1rem;
+            border-top: 0;
+          }
+          .thick-row {
+            th, td {
+              border-top-width: 5px;
+            }
+          }
+        }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
 
-}
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
 
-}
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+
+
+
+        /* Custom, iPhone Retina */ 
+        @media only screen and (min-width : 320px) {
+        .hero--bg{
+          margin-bottom:0;
+        }
+      }
+
+      /* Extra Small Devices, Phones */ 
+      @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+    .hero--bg{
+      margin-bottom:20px;
+      margin-bottom:2rem;
+    }
+    .heading{
+      margin-top: 6rem;
+    }
+    #cards{
+      margin-top:30px;
+      .card__custom--border{
+        margin:30px 0px 50px 0px
+      }
+    }
+
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
 
 }
 

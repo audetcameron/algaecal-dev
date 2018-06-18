@@ -75,6 +75,8 @@ $(overlay).click(function() {
 });
 
 //Show Speak to our bone specialist during work hours
+var cards = $("#cards");
+			cards.hide();
 
 window._wq = window._wq || [];
 _wq.push({ id: "cecdwaq3dz", onReady: function(video) {
@@ -83,6 +85,7 @@ _wq.push({ id: "cecdwaq3dz", onReady: function(video) {
 	// at 2:13 seconds
 	video.bind('secondchange', function(s) {
 		if (s === 133) {
+			cards.show();
 			console.log("We just reached " + s + " seconds!"); //if bundle !hasclass addclass block - else do nothing
 		}
 	});
@@ -90,6 +93,7 @@ _wq.push({ id: "cecdwaq3dz", onReady: function(video) {
 	// at 2:13 seconds skipping
 	video.bind("timechange", function(t) {
 		if (t > 133) {
+			cards.show();
 			console.log("Passed 2:13 | Display Pricing Bundle");//if bundle !hasclass block display block - else do nothing
 			return video.unbind;
 		}
